@@ -1,3 +1,4 @@
+use chrono::{DateTime, NaiveDateTime};
 use lazy_static::lazy_static;
 use std::collections::HashMap;
 
@@ -7,6 +8,8 @@ lazy_static! {
     static ref KEYWORDS: HashMap<&'static str, Lexeme> = {
         let mut map = HashMap::new();
 
+        map.insert("on", Lexeme::On);
+        map.insert("at", Lexeme::At);
         map.insert("an", Lexeme::An);
         map.insert("after", Lexeme::After);
         map.insert("last", Lexeme::Last);
@@ -110,6 +113,8 @@ lazy_static! {
 pub enum Lexeme {
     A,
     An,
+    On,
+    At,
     The,
     Dash,
     Today,

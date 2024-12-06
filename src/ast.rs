@@ -63,6 +63,10 @@ impl DateTime {
                 tokens += 1;
             }
 
+            if l.get(tokens) == Some(&Lexeme::At) {
+                tokens += 1;
+            }
+
             if let Some((time, t)) = Time::parse(&l[tokens..]) {
                 tokens += t;
                 return Some((Self::DateTime(date, time), tokens));
@@ -73,6 +77,10 @@ impl DateTime {
         if let Some((time, t)) = Time::parse(&l[tokens..]) {
             tokens += t;
             if l.get(tokens) == Some(&Lexeme::Comma) {
+                tokens += 1;
+            }
+
+            if l.get(tokens) == Some(&Lexeme::On) {
                 tokens += 1;
             }
 
