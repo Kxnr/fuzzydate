@@ -76,6 +76,10 @@ impl DateTime {
                 tokens += 1;
             }
 
+            if l.get(tokens) == Some(&Lexeme::On) {
+                tokens += 1;
+            }
+
             if let Some((date, t)) = Date::parse(&l[tokens..]) {
                 tokens += t;
                 return Some((Self::TimeDate(time, date), tokens));
