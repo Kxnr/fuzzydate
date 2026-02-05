@@ -47,3 +47,8 @@ Change time used as current time:
 $ fuzzydate --relative-to 2025-11-27T08:00:00-08:00 tomorrow at noon
 2025-11-28T12:00:00-08:00
 ```
+
+Change input and output timezones:
+```sh
+
+```

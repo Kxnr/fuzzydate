@@ -16,15 +16,15 @@ struct Args {
     debug: bool,
 
     /// Instant in time that should be considered the current time, formatted as an RFC3339 string
-    #[arg(short, long, group = "base", value_parser = parse_datetime)]
+    #[arg(short, long, value_parser = parse_datetime)]
     relative_to: Option<chrono::DateTime<FixedOffset>>,
 
     /// Timezone for inferred and relative values. Defaults to system timezone
-    #[arg(long, group = "base")]
+    #[arg(long)]
     input_timezone: Option<String>,
 
     /// Timezone to convert output value to. Defaults to system timezone
-    #[arg(long, group = "base")]
+    #[arg(long)]
     output_timezone: Option<String>,
 
     #[arg(default_value = "today")]
