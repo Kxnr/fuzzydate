@@ -8,7 +8,7 @@
 //! Put this in your `Cargo.toml`:
 //!
 //! ```toml
-//! fuzzydate = "0.2"
+//! fuzzydate = "0.4"
 //! ```
 //!
 //! ## Example
@@ -18,7 +18,7 @@
 //! use chrono::{NaiveDateTime};
 //!
 //! fn main() {
-//!     let date_string = "Five days after 2/12/22 5:00 PM";
+//!     let date_string = "Five days after 2/12/22 at 5:00 PM";
 //!     let date = parse(date_string).unwrap();
 //!     println!("{:?}", date);
 //! }
@@ -29,7 +29,6 @@
 //!
 //! ## Grammar
 //! ```text
-//! ; TODO: in <num> <duration>
 //! <datetime> ::= <time>
 //!              | <time> , <date_expr>
 //!              | <time> <date_expr>
