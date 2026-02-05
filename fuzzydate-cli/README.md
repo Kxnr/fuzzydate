@@ -48,7 +48,8 @@ $ fuzzydate --relative-to 2025-11-27T08:00:00-08:00 tomorrow at noon
 2025-11-28T12:00:00-08:00
 ```
 
-Change input and output timezones:
+Change timezone used for calculation and display:
 ```sh
-
+⟫⟫ fuzzydate three hours after midnight --input-timezone America/Chicago --output-timezone America/Los_Angeles --relative-to 2026-02-05T13:00:00-00:00
+2026-02-05T01:00:00-08:00
 ```
